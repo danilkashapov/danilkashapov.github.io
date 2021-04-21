@@ -1,0 +1,424 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.wrapper {
+    position: absolute;
+    overflow-x: hidden;
+}
+.main {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    border-left:3px solid #e55a55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a2b2f;
+    transition: .5s;
+    transform: translateX(0%);
+}
+.menu_active {
+    transform: translateX(-100%);
+}
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+    /*border-bottom: 2px solid white;*/
+
+}
+.menu-list .whatsapp {
+    text-align: center;
+}
+.menu-list .vk {
+    text-align: center;
+}
+.menu-list .inst {
+    text-align: center;
+}
+.menu-list div {
+    margin: 15px 0 0;
+}
+.menu-list a {
+    padding: 10px;
+    width: 100%;
+    font-size: 25px;
+    text-align: left;
+    color: #e55a55;
+}
+.menu-list a:active {
+    background: #2a2b2f;
+    transition: .5s;
+}
+
+.container {
+    margin: auto;
+    padding: 0 20px;
+    max-width: 1140px;
+    width: 100%;
+}
+.menu {
+    display: none;
+}
+.menu::before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../images/menu.png") no-repeat center center /contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+.close:before {
+    position: absolute;
+    /*vertical-align: middle;*/
+    /*display: inline-block;*/
+    content: '';
+    background: url("../images/cancel.svg") no-repeat center center /contain;
+    width: 41px;
+    height: 38px;
+    /*margin-right: 10px;*/
+    filter: invert(1);
+    left: 72%;
+    top: 20px;
+}
+header {
+    /* background: #2a2b2f; */
+    background-color: Transparent;
+    min-height: 12vh;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #2a2b2f;
+    border-bottom: 4px solid #e55a55;
+
+
+}
+main {
+    flex: 1 1 auto;
+    margin-top: 11vh;
+}
+.header {
+    display: flex;
+    padding: 20px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a {
+    color: #fff;
+}
+@font-face {
+    font-family: 'Church';
+    src: url(../fonts/church.otf);
+}
+.logo-link {
+    font-family: 'Church', sans-serif;
+    font-size: 23px;
+    padding-right: 40px;
+}
+.logo a:not(:first-child) {
+    margin: 0 10px;
+    position: relative;
+    font-size: 20px;
+    color: #FFF;
+    -webkit-transition: all .1s ease-out;
+}
+
+.logo a:hover {
+    color: #e55a55;
+    transition: color .1s linear;
+}
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.inst {
+    padding-left: 10px;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    
+}
+.inst:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    background: #e55a55;
+
+}
+
+.inst:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../images/icons/044-instagram.svg") no-repeat center center /contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+}
+.vk {
+    padding-left: 10px;
+}
+
+.vk:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../images/icons/105-VK.svg") no-repeat center center /contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+}
+.whatsapp {
+    padding-left: 10px;
+}
+.whatsapp:before {
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+    background: url("../images/icons/109-whatsapp.svg") no-repeat center center /contain;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+}
+
+.banner {
+    background: url(../images/2.jpg) no-repeat center;
+    background-size: 100%;
+    background-attachment: fixed;
+    min-height: 88vh;
+    display: flex;
+    align-items:center;
+}
+.banner-line {
+    color: #e55a55;
+    height: 3px;
+    width: 100%;
+    margin: 20px 0;
+    border:none;
+    background-color: #e55a55;
+    text-align: center;
+  
+}
+
+.banner-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+}
+.description h2 {
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+.description h3 {
+    text-align: center;
+    color: #e2e2e2;
+    line-height: 35px;
+}
+.banner-btn {
+    margin: 40px 0 0 0;
+    text-align: center;
+    
+}
+.banner-btn-link {
+    color:white;
+    background: #e55a55;
+    border: 2px solid #e55a55;
+    padding: 20px 30px;
+    border-radius: 2px;
+    font-size: 23px;
+    -webkit-transition: all linear .2s;
+}
+.banner-btn-link:hover {
+    color:#e55a55;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid #e55a55;
+    transition: .3s;
+}
+.products {
+    margin: 50px 0;
+}
+
+.products h1 {
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 4px solid #e55a55;
+}
+.products-cards {
+    display: flex;
+    flex-direction: column;
+}
+.cards {
+    width: 100%;
+    min-height: 30vh;
+    margin: 10px 0;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    
+}
+.cards:hover {
+    background-size: 110%;
+    transition: .5s;
+    cursor: pointer;
+}
+.carp {
+    background: url(../images/products/carps/carps.jpg) no-repeat center;
+    background-size: 100%;
+}
+.perchs {
+    background: url(../images/products/carps/okunya.jpg) no-repeat center;
+    background-size: 100%;
+}
+.crayfishes {
+    background: url(../images/products/carps/crayfishes.jpg) no-repeat center;
+    background-size: 100%;
+}
+.cards > div {
+    background: rgba(0,0,0,0.6);
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+}
+.cards h2 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+footer {
+    background: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer {
+    display: flex;
+
+}
+.right-block {
+    color:#FFF;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.right-block h2 {
+    border-bottom: 4px solid #e55a55;
+    margin: 10px 0 0 20px;
+    width: fit-content;
+}
+.right-block h4 {
+    padding: 20px 60px 0 20px;
+    line-height: 50px;
+    
+}
+iframe {
+    width:650px;
+    height:450px;
+}
+@media(max-width: 1200px){ 
+    iframe {
+        height:650px;
+    }
+}
+@media(max-width: 1000px){ 
+    .footer {
+        flex-direction: column;
+    }
+    iframe {
+        width:700px;
+        height:350px;
+    }
+}
+@media(max-width: 865px){ 
+    .banner {
+        min-height:90vh;
+        background-size: cover;
+    }
+}
+@media(max-width: 770px){ 
+    .logo a:not(:first-child) {
+        display: none;
+    }
+    .links {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}
+@media(max-width: 770px){ 
+    iframe {
+        width:516px;
+        height:350px;
+    }
+}
+
+@media(max-width: 770px){ 
+    iframe {
+        width:499px;
+        height:450px;
+    }
+    .main {
+        width: 60%;
+    }
+}
+@media(max-width: 513px){ 
+    iframe {
+        width:429px;
+        height:350px;
+        margin: 0 auto;
+    }
+    .perchs, .cards, .crayfishes {
+        background-size: cover;
+    }
+}
+@media(max-width: 464px){ 
+    iframe {
+        width:300px;
+        height:370px;
+    }
+}
+@media(max-width: 376px){ 
+    iframe {
+        width:351px;
+        height:370px;
+    }
+}
